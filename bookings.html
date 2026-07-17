@@ -13,25 +13,33 @@
   <nav>
     <ul class="nav-menu">
       <li><a href="home_page.html">Home</a></li>
-      <li><a href="bookings.html">Bookings</a></li>
+      <li><a href="bookings.html" class="active">Bookings</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="page-container">
-  <h1>Hotel Booking Rate Calculator</h1>
+<section class="inner-hero">
+  <div class="inner-hero-inner">
+    <span class="eyebrow">Bookings</span>
+    <h1>Hotel Booking Rate Calculator</h1>
+    <p>Enter the number of nights you plan to stay and we'll show you the rate that applies.</p>
+  </div>
+</section>
 
-  <div class="calc-form">
-    <label for="nights">Number of nights you plan to stay:</label>
-    <input type="text" id="nights" placeholder="e.g. 4">
+<main class="section">
+  <div class="section-inner narrow">
+    <div class="page-container calc-form">
+      <label for="nights">Number of nights you plan to stay:</label>
+      <input type="text" id="nights" placeholder="e.g. 4">
 
-    <button type="button" onclick="checkRate()">Check Rate</button>
+      <button type="button" onclick="checkRate()">Check Rate</button>
 
-    <div id="result"></div>
+      <div id="result"></div>
 
-    <div class="booking-link" id="bookingLink">
-      <a href="reservation.html">Proceed with Booking &rarr;</a>
+      <div class="booking-link" id="bookingLink">
+        <a href="reservation.html">Proceed with Booking &rarr;</a>
+      </div>
     </div>
   </div>
 </main>
