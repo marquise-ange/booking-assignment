@@ -111,7 +111,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Inner page hero (bookings / reservation) */
+/* Inner page hero (bookings / reservation / contact) */
 .inner-hero {
     background-color: #14342b;
     color: #ffffff;
@@ -401,4 +401,87 @@ footer {
     color: #888;
     font-size: 0.85rem;
     background-color: #ffffff;
+}
+
+/* ============================================
+   Contact form (contact.html) — new additions
+   ============================================ */
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.98rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #c9a24b;
+}
+
+.contact-form .field {
+    margin-bottom: 4px;
+}
+
+.contact-form .error-text {
+    display: none;
+    color: #b3261e;
+    font-size: 0.82rem;
+    margin-top: 6px;
+}
+
+.contact-form .field.invalid input {
+    border-color: #b3261e;
+    background-color: #fbeceb;
+}
+
+.contact-form .field.invalid .error-text {
+    display: block;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 26px;
+    padding: 14px;
+    background-color: #14342b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0d241d;
+}
+
+/* Shared success banner (contact + reservation confirmations) */
+.success-banner {
+    display: none;
+    margin-bottom: 22px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #f0f4f2;
+    border-left: 4px solid #14342b;
+    color: #14342b;
+    font-weight: 600;
+}
+
+.success-banner.show {
+    display: block;
 }
