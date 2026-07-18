@@ -1,83 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Booking Rate Calculator</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking Rate Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="logo">Serene Stay Hotel</div>
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="home_page.html">Home</a></li>
-      <li><a href="bookings.html" class="active">Bookings</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="logo">Serene Stay Hotel</div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="home-page.html">Home</a></li>
+        <li><a href="bookings.html" class="active">Bookings</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="inner-hero">
-  <div class="inner-hero-inner">
-    <span class="eyebrow">Bookings</span>
-    <h1>Hotel Booking Rate Calculator</h1>
-    <p>Enter the number of nights you plan to stay and we'll show you the rate that applies.</p>
-  </div>
-</section>
+  <section class="inner-hero">
+    <div class="inner-hero-inner">
+      <span class="eyebrow">Bookings</span>
+      <h1>Hotel Booking Rate Calculator</h1>
+      <p>Enter the number of nights you plan to stay and we'll show you the rate that applies.</p>
+    </div>
+  </section>
 
-<main class="section">
-  <div class="section-inner narrow">
-    <div class="page-container calc-form">
-      <label for="nights">Number of nights you plan to stay:</label>
-      <input type="text" id="nights" placeholder="e.g. 4">
+  <main class="section">
+    <div class="section-inner narrow">
+      <div class="page-container calc-form">
+        <label for="nights">Number of nights you plan to stay:</label>
+        <input type="text" id="nights" placeholder="e.g. 4">
 
-      <button type="button" onclick="checkRate()">Check Rate</button>
+        <button type="button" onclick="checkRate()">Check Rate</button>
 
-      <div id="result"></div>
+        <div id="result"></div>
 
-      <div class="booking-link" id="bookingLink">
-        <a href="reservation.html">Proceed with Booking &rarr;</a>
+        <div class="booking-link" id="bookingLink">
+          <a href="reservation.html">Proceed with Booking &rarr;</a>
+        </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
-<footer>
-  <p>&copy; 2026 Serene Stay Hotel. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>&copy; 2026 Serene Stay Hotel. All rights reserved.</p>
+  </footer>
 
-<script>
-function checkRate() {
-  const input = document.getElementById("nights").value;
-  const nights = Number(input);
-  const resultDiv = document.getElementById("result");
-  const bookingLink = document.getElementById("bookingLink");
+  <script>
+    function checkRate() {
+      const input = document.getElementById("nights").value;
+      const nights = Number(input);
+      const resultDiv = document.getElementById("result");
+      const bookingLink = document.getElementById("bookingLink");
 
-  let message = "";
+      let message = "";
 
-  if (input.trim() === "" || isNaN(nights) || nights < 1) {
-    message = "Please enter a valid number of nights.";
-    resultDiv.classList.add("error");
-    bookingLink.style.display = "none";
-  } else if (nights >= 1 && nights <= 2) {
-    message = "Standard rate: $120/night.";
-    resultDiv.classList.remove("error");
-    bookingLink.style.display = "block";
-  } else if (nights >= 3 && nights <= 6) {
-    message = "Weekly discount rate: $100/night.";
-    resultDiv.classList.remove("error");
-    bookingLink.style.display = "block";
-  } else if (nights > 6) {
-    message = "Extended stay rate: $80/night.";
-    resultDiv.classList.remove("error");
-    bookingLink.style.display = "block";
-  }
+      if (input.trim() === "" || isNaN(nights) || nights < 1) {
+        message = "Please enter a valid number of nights.";
+        resultDiv.classList.add("error");
+        bookingLink.style.display = "none";
+      } else if (nights >= 1 && nights <= 2) {
+        message = "Standard rate: $120/night.";
+        resultDiv.classList.remove("error");
+        bookingLink.style.display = "block";
+      } else if (nights >= 3 && nights <= 6) {
+        message = "Weekly discount rate: $100/night.";
+        resultDiv.classList.remove("error");
+        bookingLink.style.display = "block";
+      } else if (nights > 6) {
+        message = "Extended stay rate: $80/night.";
+        resultDiv.classList.remove("error");
+        bookingLink.style.display = "block";
+      }
 
-  resultDiv.textContent = message;
-}
-</script>
+      resultDiv.textContent = message;
+    }
+  </script>
 
 </body>
+
 </html>
